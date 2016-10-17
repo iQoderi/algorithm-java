@@ -83,6 +83,20 @@ public class Sort {
         quickSort(arr, left, i - 1);
         quickSort(arr, i + 1, right);
     }
+
+    public void bucketSort(int[] arr, int n) {
+        int[] buckets = new int[n];
+        int i;
+        for (i = 0; i < n; i++) {
+            buckets[i] = 0;
+        }
+        for (i = 0; i < n; i++) {
+            buckets[arr[i]]++;
+        }
+        for (i = 0; i < n; i++) {
+            if (buckets[i] != 0) {
+                System.out.println(i);
+            }
+        }
+    }
 }
-
-
